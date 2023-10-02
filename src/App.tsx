@@ -3,8 +3,9 @@ import { useState } from "react"
 const App = () => {
 
   const [checked, setChecked] = useState<boolean>(false)
+  const [active, setActive] = useState<string>("")
   return (
-    <div className="bg-gray-400 w-full h-screen flex items-center justify-center">
+    <div className="bg-gray-400 w-full h-screen flex flex-col items-center justify-center">
       <div className="min-w-[200px] min-h-[200px] rounded-lg bg-white flex justify-center items-center">
         <div className="flex flex-col">
           <input type="checkbox" onClick={(e:any) => {
@@ -14,6 +15,17 @@ const App = () => {
             alert("Bulolu Puff am, Bulolu Pass am, E done Burst E done cast")
           }}>Proceed</button>
         </div>
+
+
+      </div>
+      <div className="min-w-[300px] min-h-[200px] bg-gray-600 rounded-xl mt-5 flex flex-col items-center">
+        <div className="bg-red-400 min-w-[250px] mt-5 h-[40px] rounded-lg overflow-hidden">
+          <input type="text" className="w-full h-full pl-3 outline-none" placeholder="Email"value={active} onChange={(e: any) => {
+            setActive(e.target.value)
+            console.log(setActive)
+          }} />
+        </div>
+        <div className={`${active !== '' ? "text-blue-500" : "hidden"} capitalize mt-5`} >Be active</div>
       </div>
     </div>
   )
