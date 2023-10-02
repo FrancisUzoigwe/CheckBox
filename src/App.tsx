@@ -10,7 +10,9 @@ const App = () => {
           <input type="checkbox" onClick={(e:any) => {
             setChecked(e.target.checked)
           }}/>
-          <button className={`mt-4 px-7 py-3 transition-all duration-500 ${checked? "bg-purple-400" : "bg-gray-300"} text-white font-semibold  rounded-xl`} disabled={!checked}>Proceed</button>
+          <button className={`mt-4 px-7 py-3 transition-all duration-500 ${checked? "bg-purple-400" : "bg-gray-300"} text-white font-semibold  rounded-xl`} disabled={!checked} onClick={() => {
+            alert("Bulolu Puff am, Bulolu Pass am, E done Burst E done cast")
+          }}>Proceed</button>
         </div>
       </div>
     </div>
