@@ -52,9 +52,10 @@ const App = () => {
         </div>
       </div>
       <div className="flex items-center mt-5">
-        <div>{!toggle? (<div className="items-center text-2xl">*****</div>): (<div>₦5000.00</div>)}</div>
+        <div>{!toggle? (<div className="items-center text-3xl">*****</div>): (<div className="font-bold ">₦5000.00</div>)}</div>
         <div className="w-[20px] h-[20px] ml-4 transition-all duration-300 " onClick={() => {
           onToggle()
+          console.log(toggle)
         }}>
           {!toggle? (<div><FaEye className="w-full h-full"/></div>): (<div><FaEyeSlash className="w-full h-full"/></div>)}
         </div>
